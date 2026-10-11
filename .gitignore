@@ -1,0 +1,25 @@
+# Build output
+**/bin/
+**/obj/
+**/node_modules/
+**/TestResults/
+**/.vs/
+.vs/
+.idea/
+
+# Local-only configuration and credentials
+.env
+.env.*
+!.env.example
+**/secrets.json
+*.pfx
+*.p12
+*.key
+
+# Editor and OS files
+*.user
+*.suo
+*.cache
+*.log
+.DS_Store
+Thumbs.db
