@@ -9,4 +9,7 @@
         <PackageReference Include="MediatR" Version="12.3.0" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Compile Remove="ChatService.Api/**/*.cs" />
+    </ItemGroup>
 </Project>

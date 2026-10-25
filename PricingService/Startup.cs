@@ -40,6 +40,7 @@ public class Startup
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseRouting();
+        app.UseDiscoveryClient();
         app.UseGlobalExceptionHandler(cfg => cfg.MapExceptions());
 
         if (env.IsDevelopment())
@@ -48,7 +49,7 @@ public class Startup
             app.UseSwaggerUI();
         }
 
-        app.UseInitializer();
+        app.UseInitializer().GetAwaiter().GetResult();
         app.UseEndpoints(endpoints => endpoints.MapControllers());
     }
 }

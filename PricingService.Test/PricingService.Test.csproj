@@ -21,4 +21,8 @@
         <ProjectReference Include="..\PricingService\PricingService.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Compile Remove="PricingService.Test/**/*.cs" />
+    </ItemGroup>
+
 </Project>

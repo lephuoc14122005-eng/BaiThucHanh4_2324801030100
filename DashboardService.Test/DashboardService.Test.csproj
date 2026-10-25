@@ -27,4 +27,7 @@
         <ProjectReference Include="..\DashboardService\DashboardService.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Compile Remove="DashboardService.Test/**/*.cs" />
+    </ItemGroup>
 </Project>

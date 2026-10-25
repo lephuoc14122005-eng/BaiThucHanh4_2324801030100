@@ -19,4 +19,7 @@
         <ProjectReference Include="..\PolicyService.Api\PolicyService.Api.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Compile Remove="ChatService/**/*.cs" />
+    </ItemGroup>
 </Project>
