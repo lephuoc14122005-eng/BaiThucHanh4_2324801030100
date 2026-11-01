@@ -2,16 +2,16 @@
 
 public class Product
 {
-    public Guid Id { get; }
-    public string Code { get; }
-    public string Name { get; }
+    public Guid Id { get; private set; }
+    public string Code { get; private set; }
+    public string Name { get; private set; }
     public ProductStatus Status { get; private set; }
-    public string Image { get; }
-    public string Description { get; }
-    public IList<Cover> Covers { get; }
-    public IList<Question> Questions { get; }
-    public int MaxNumberOfInsured { get; }
-    public string ProductIcon { get; }
+    public string Image { get; private set; }
+    public string Description { get; private set; }
+    public IList<Cover> Covers { get; private set; }
+    public IList<Question> Questions { get; private set; }
+    public int MaxNumberOfInsured { get; private set; }
+    public string ProductIcon { get; private set; }
 
     private Product()
     {

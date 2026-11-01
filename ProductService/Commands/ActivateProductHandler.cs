@@ -17,6 +17,7 @@ public class ActivateProductHandler : IRequestHandler<ActivateProductCommand, Ac
     {
         var product = await products.FindById(request.ProductId);
         product.Activate();
+        await products.Save(product);
         return new ActivateProductResult
         {
             ProductId = product.Id

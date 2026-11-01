@@ -18,6 +18,7 @@ public class DiscontinueProductHandler : IRequestHandler<DiscontinueProductComma
     {
         var product = await products.FindById(request.ProductId);
         product.Discontinue();
+        await products.Save(product);
         return new DiscontinueProductResult
         {
             ProductId = product.Id

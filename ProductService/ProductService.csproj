@@ -8,6 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Remove="ProductService\**\*.cs" />
+        <Compile Remove="DataAccess\EF\**\*.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
         <Compile Remove="wwwroot\**" />
         <Content Remove="wwwroot\**" />
         <EmbeddedResource Remove="wwwroot\**" />
@@ -17,11 +22,8 @@
     <ItemGroup>
         <PackageReference Include="Ensure.That" Version="10.1.0" />
         <PackageReference Include="MediatR" Version="12.3.0" />
+        <PackageReference Include="Marten" Version="8.37.4" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.6" />
-
-        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.6" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
 
         <PackageReference Include="Steeltoe.Discovery.ClientBase" Version="3.2.7" />
         <PackageReference Include="Steeltoe.Discovery.Eureka" Version="3.2.7" />

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using ProductService.DataAccess.EF;
+using ProductService.DataAccess.Marten;
 using ProductService.Init;
 using Steeltoe.Discovery.Client;
 
@@ -20,7 +20,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDiscoveryClient(builder.Configuration);
-builder.Services.AddEFConfiguration(builder.Configuration);
+builder.Services.AddMartenConfiguration(builder.Configuration);
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
 builder.Services.AddProductDemoInitializer();
 

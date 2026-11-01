@@ -4,6 +4,10 @@
         <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Compile Remove="ProductService.Api\**\*.cs" />
+    </ItemGroup>
+
 
     <ItemGroup>
         <PackageReference Include="MediatR" Version="12.3.0" />

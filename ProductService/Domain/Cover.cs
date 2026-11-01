@@ -16,12 +16,12 @@ public class Cover
         SumInsured = sumInsured;
     }
 
-    public Guid Id { get; }
-    public string Code { get; }
-    public string Name { get; }
-    public string Description { get; }
-    public bool Optional { get; }
-    public decimal? SumInsured { get; }
+    public Guid Id { get; private set; }
+    public string Code { get; private set; }
+    public string Name { get; private set; }
+    public string Description { get; private set; }
+    public bool Optional { get; private set; }
+    public decimal? SumInsured { get; private set; }
 
     //public Product Product { get; private set; }
 }

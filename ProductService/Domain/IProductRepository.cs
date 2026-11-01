@@ -4,6 +4,8 @@ public interface IProductRepository
 {
     Task<Product> Add(Product product);
 
+    Task Save(Product product);
+
     Task<List<Product>> FindAllActive();
 
     Task<Product> FindOne(string productCode);

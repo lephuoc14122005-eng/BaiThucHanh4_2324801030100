@@ -1,26 +1,27 @@
-﻿using ProductService.DataAccess.EF;
+using Marten;
+using ProductService.Domain;
 
 namespace ProductService.Init;
 
 public class DataLoader
 {
-    private readonly ProductDbContext dbContext;
+    private readonly IDocumentStore documentStore;
 
-    public DataLoader(ProductDbContext context)
+    public DataLoader(IDocumentStore documentStore)
     {
-        dbContext = context;
+        this.documentStore = documentStore;
     }
 
     public void Seed()
     {
-        dbContext.Database.EnsureCreated();
-        if (dbContext.Products.Any()) return;
+        using var session = documentStore.LightweightSession();
+        if (session.Query<Product>().Any()) return;
 
-        dbContext.Products.Add(DemoProductFactory.Travel());
-        dbContext.Products.Add(DemoProductFactory.House());
-        dbContext.Products.Add(DemoProductFactory.Farm());
-        dbContext.Products.Add(DemoProductFactory.Car());
-
-        dbContext.SaveChanges();
+        session.Store(
+            DemoProductFactory.Travel(),
+            DemoProductFactory.House(),
+            DemoProductFactory.Farm(),
+            DemoProductFactory.Car());
+        session.SaveChangesAsync().GetAwaiter().GetResult();
     }
 }

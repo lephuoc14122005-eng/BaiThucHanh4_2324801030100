@@ -6,6 +6,10 @@
         <UserSecretsId>6e9f2776-8954-46fe-b74a-372f9006db7b</UserSecretsId>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Compile Remove="PaymentService\**\*.cs" />
+    </ItemGroup>
+
 
     <ItemGroup>
         <PackageReference Include="Hangfire.AspNetCore" Version="1.8.14" />
@@ -14,7 +18,7 @@
         <PackageReference Include="GlobalExceptionHandler" Version="4.0.2" />
         <PackageReference Include="Hangfire.PostgreSql" Version="1.20.8" />
         <PackageReference Include="Hangfire.PostgreSql.NetCore" Version="1.4.3" />
-        <PackageReference Include="Marten" Version="7.19.1" />
+        <PackageReference Include="Marten" Version="8.37.4" />
         <PackageReference Include="MediatR" Version="12.3.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
         <PackageReference Include="EasyNetQ" Version="7.8.0" />

@@ -16,4 +16,8 @@ GRANT ALL PRIVILEGES ON DATABASE lab_netmicro_policy TO lab_user;
 CREATE DATABASE lab_netmicro_pricing;
 GRANT ALL PRIVILEGES ON DATABASE lab_netmicro_pricing TO lab_user;
 
+--products
+CREATE DATABASE lab_netmicro_products;
+GRANT ALL PRIVILEGES ON DATABASE lab_netmicro_products TO lab_user;
+
 

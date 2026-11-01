@@ -12,8 +12,8 @@ public class Choice
         Label = label;
     }
 
-    public string Code { get; }
-    public string Label { get; }
+    public string Code { get; private set; }
+    public string Label { get; private set; }
 
     public ChoiceQuestion Question { get; private set; }
 }
